@@ -1,0 +1,25 @@
+<h2>Basic Request</h2>
+<button type="button" (click)="getPrenotazioni()">Tutte prenotazioni</button>
+
+<table *ngIf="fooData" class="table">
+    <thead>
+      <tr>
+        <th>data/ora</th>
+        <th>Nome Cogome</th>
+        <th>Email</th>
+        <th>telefono</th>
+        <th>indirizzo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pren of fooData">
+        <td>{{pren.data}} / {{pren.ora}}</td>
+        <td>{{pren.nome}} {{pren.cognome}}</td>
+        <td>{{pren.email}}</td>
+        <td>{{pren.telefono}}</td>
+        <td>{{pren.indirizzo}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
